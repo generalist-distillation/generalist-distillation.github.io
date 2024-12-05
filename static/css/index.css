@@ -180,3 +180,8 @@ body {
   /* max-height: 300px; */
   object-fit: cover;
 }
+
+.subtitle.is-7 {
+  font-size: 1rem;
+  font-weight: normal;
+}
