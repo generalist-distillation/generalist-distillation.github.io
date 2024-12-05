@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning">
+  <meta name="keywords" content="Robotic Foundation Models, Robotics, Robotic Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning</title>
+
+
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRRQ4S007N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-KRRQ4S007N');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/berkeley.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="has-text-centered">
+            <h1 class="title is-1 publication-title ">
+              Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://charlesxu0124.github.io/">Charles Xu</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://colinqiyangli.github.io/">Qiyang Li</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.eecs.berkeley.edu/~jianlanluo/">Jianlan Luo</a>, and
+              </span>
+              <span class="author-block">
+                <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Department of EECS, University of California, Berkeley</span>
+            </div>
+
+<!-- 
+            <div class="column has-text-centered">
+              <div class="publication-links">
+              <span class="link-block">
+                <a href="./static/hil-serl-paper.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+                <span class="link-block">
+                  <a href="https://youtu.be/GuD_-zhJgbs"
+                      class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Intro Video</span>
+                  </a>
+                </span> -->
+                
+                <!-- <span class="link-block">
+                  <a href="https://hil-serl.github.io/"
+                      class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://hil-serl.github.io/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/rail-berkeley/hil-serl"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>HIL-SERL Code</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+            <!-- <img src="./static/images/teasers.png" alt="Teaser Image"> -->
+            <!-- <div class="content" style="font-weight: bold; font-size: larger;">
+              SERL is an easy to use software suite for training online reinforcement learning agents on real robots.
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="content has-text-centered">
+    <div class="container">
+      <div style="background-color: #f5f5f5; padding: 10px 30px;">
+      <h2 class="title is-4">FMB Single-Object Assembly</h2>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-3">
+          <h4 class="text is-6">OpenVLA + RLDG</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/FMB_OpenVLA_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">OpenVLA</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/FMB_OpenVLA.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">Octo + RLDG</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/FMB_Octo_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">Octo</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/FMB_Octo.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content has-text-centered">
+    <div class="container">
+      <div style="background-color: #f5f5f5; padding: 10px 30px;">
+      <h2 class="title is-4">Connector Insertion</h2>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-3">
+          <h4 class="text is-6">OpenVLA + RLDG <br> (Seen VGA Connector)</h4>
+
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="1.0"
+                src="./static/videos/seen_connector_OpenVLA_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">OpenVLA <br> (Seen VGA Connector)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="1.0"
+                src="./static/videos/seen_connector_OpenVLA.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">Octo + RLDG <br> (Seen VGA Connector)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="1.0"
+                src="./static/videos/seen_connector_Octo_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">Octo <br> (Seen VGA Connector)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="1.0"
+                src="./static/videos/seen_connector_Octo.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+            <h4 class="text is-6">OpenVLA + RLDG <br> (Unseen Type-C Connector)</h4>
+  
+            <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="1.0"
+                  src="./static/videos/unseen_connector_OpenVLA_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+            <div class="column is-3">
+            <h4 class="text is-6">OpenVLA <br> (Unseen Type-C Connector)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="1.0"
+                  src="./static/videos/unseen_connector_OpenVLA.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+            <div class="column is-3">
+            <h4 class="text is-6">Octo + RLDG <br> (Unseen Type-C Connector)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="1.0"
+                  src="./static/videos/unseen_connector_Octo_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+            <div class="column is-3">
+            <h4 class="text is-6">Octo <br> (Unseen Type-C Connector)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="1.0"
+                  src="./static/videos/unseen_connector_Octo.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content has-text-centered">
+    <div class="container">
+      <div style="background-color: #f5f5f5; padding: 10px 30px;">
+      <h2 class="title is-4">Pick and Place</h2>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-3">
+          <h4 class="text is-6">OpenVLA + RLDG <br>(Seen)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/seen_pick_place_OpenVLA_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">OpenVLA <br>(Seen)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/seen_pick_place_OpenVLA.mov" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">Octo + RLDG <br>(Seen)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/seen_pick_place_Octo_RLDG.mp4" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+          <h4 class="text is-6">Octo <br>(Seen)</h4>
+            <div class="video-crop-container">
+              <video autoplay loop muted playsinline data-playback-rate="2.0"
+                src="./static/videos/seen_pick_place_Octo.mp4" poster="./resources/loading-icon.gif"></video>
+            </div>
+          </div>
+          <div class="column is-3">
+            <h4 class="text is-6">OpenVLA + RLDG <br>(Unseen Object and Background)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="2.0"
+                  src="./static/videos/unseen_pick_place_OpenVLA_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+            <div class="column is-3">
+            <h4 class="text is-6">OpenVLA <br>(Unseen Object and Background)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="2.0"
+                  src="./static/videos/unseen_pick_place_OpenVLA.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+            <div class="column is-3">
+            <h4 class="text is-6">Octo + RLDG <br>(Unseen Object and Background)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="2.0"
+                  src="./static/videos/unseen_pick_place_Octo_RLDG.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+            <div class="column is-3">
+            <h4 class="text is-6">Octo <br>(Unseen Object and Background)</h4>
+              <div class="video-crop-container">
+                <video autoplay loop muted playsinline data-playback-rate="2.0"
+                  src="./static/videos/unseen_pick_place_Octo.mov" poster="./resources/loading-icon.gif"></video>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height: 30px;"></div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website was built off of <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a> source
+              code
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        const playbackRate = video.getAttribute('data-playback-rate');
+        if (playbackRate) {
+          video.playbackRate = parseFloat(playbackRate);
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
